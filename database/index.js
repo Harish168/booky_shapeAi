@@ -1,31 +1,52 @@
-
 let books = [
-    {
-      ISBN: "12345Book",
-      title: "Getting started with MERN",
-      pubDate: "2021-07-07",
-      language: "en",
-      numPage: 250,
-      author: [1, 2],
-      publications: [1],
-      category: ["tech", "programming", "education", "thriller"],
-    },
-  ];
-  
-  const author = [
-    {
-      id: 1,
-      name: "Pavan",
-      books: ["12345Book","112233Book"],
-    },
-    { id: 2, name: "Elon Musk", books: ["12345Book"] },
-  ];
-  
-  const publication = [
-    {
-      id: 1,
-      name: "writex",
-      books: ["12345Book"],
-    },
-  ];
-  module.exports = { books, author, publication};
+  {
+    ISBN: "12345ONE",
+    title: "Getting started with MERN",
+    authors: [1, 2],
+    language: "en",
+    pubDate: "2021-07-07",
+    numOfPage: 225,
+    category: ["fiction", "programming", "tech", "web dev"],
+    publication: 1,
+  },
+  {
+    ISBN: "12345Two",
+    title: "Getting started with Python",
+    authors: [1, 2],
+    language: "en",
+    pubDate: "2021-07-07",
+    numOfPage: 225,
+    category: ["fiction", "tech", "web dev"],
+    publication: 1,
+  },
+];
+
+const authors = [
+  {
+    id: 1,
+    name: "pavan",
+    books: ["12345ONE", "12345Two"],
+  },
+  {
+    id: 2,
+    name: "Harish",
+    books: ["12345ONE"],
+  },
+];
+
+const publications = [
+  {
+    id: 1,
+    name: "Chakra",
+    books: ["12345ONE"],
+  },
+  {
+    id: 2,
+    name: "Vickie Publications",
+    books: [],
+  },
+];
+
+module.exports = { books, authors, publications };
+
+// HTTP client -> helper

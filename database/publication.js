@@ -1,3 +1,4 @@
+
 const mongoose = require("mongoose");
 
 // Publication Schema
@@ -8,6 +9,6 @@ const PublicationSchema = mongoose.Schema({
 });
 
 // Publication Model
-const PublicationModel = mongoose.model(PublicationSchema);
+const PublicationModel = mongoose.model("publication",PublicationSchema);
 
-module.exports = PublicationModel;
+module.exports = PublicationModel

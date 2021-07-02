@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 
 // Database
 const database = require("./database/index");
+
 const BookModel = require("./database/book");
 const AuthorModel = require("./database/author");
 const PublicationModel = require("./database/publication");
@@ -28,8 +29,9 @@ Access          PUBLIC
 Parameter       NONE
 Methods         GET
 */
-booky.get("/",(req,res) => {
-    return res.json({books: database.books});
+booky.get("/",async (req,res) => {
+  const getAllBooks = BookModel.find();
+  return res.json({books: getAllBooks});
 });
 /*
 Route           /is
